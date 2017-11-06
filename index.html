@@ -12,8 +12,9 @@
 
 	<div id="symbology">
 		<h2>Simbología</h2>
-		<div class="available">Asiento Disponible</div>
-		<div class="occupied">Asiento Ocupado</div>
+		<div id="symbology-first-class">Primera Clase - Asiento Disponible</div>
+		<div id="symbology-economy-class">Clase Económica - Asiento Disponible</div>
+		<div id="symbology-occupied">Asiento Ocupado</div>
 	</div>
 
 
@@ -23,22 +24,22 @@
 			<th>Asiento</th>
 		</tr>
 
-		<tr>
-			<td>Primera Clase</td>
-			<td class="available">1</td>
-			<td class="available">2</td>
-			<td class="available">3</td>
-			<td class="available">4</td>
+		<tr id="first-class">
+			<th>Primera Clase</th>
+			<td class="available" data-number="1">1</td>
+			<td class="available" data-number="2">2</td>
+			<td class="available" data-number="3">3</td>
+			<td class="available" data-number="4">4</td>
 		</tr>
 
-		<tr>
-			<td>Clase Económica</td>
-			<td class="available">5</td>
-			<td class="available">6</td>
-			<td class="available">7</td>
-			<td class="available">8</td>
-			<td class="available">9</td>
-			<td class="available">10</td>
+		<tr id="economy-class">
+			<th>Clase Económica</th>
+			<td class="available" data-number="5">5</td>
+			<td class="available" data-number="6">6</td>
+			<td class="available" data-number="7">7</td>
+			<td class="available" data-number="8">8</td>
+			<td class="available" data-number="9">9</td>
+			<td class="available" data-number="10">10</td>
 		</tr>
 	</table>
 	
