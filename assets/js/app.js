@@ -40,6 +40,16 @@ function economyClass() {
 		if (airlineSeats[i] === false) {
 			airlineSeats[i] = true;
 			document.getElementsByTagName("td")[i].setAttribute("class", "occupied");
+			var ticket = document.getElementsByTagName("td")[i].dataset.number;
+			var printedTicketTitle = document.createElement("p");
+			var title = document.createTextNode("Pase de Abordar");
+			var printedTicketContent = document.createElement("span");
+			var content = document.createTextNode("No. de asiento: " + ticket + ".");
+			printedTicketTitle.appendChild(title);
+			printedTicketContent.appendChild(content);
+			var where = document.getElementById("printed-tickets");
+			where.appendChild(printedTicketTitle);
+			where.appendChild(printedTicketContent);
 			break;
 		} else if (i == 9 && airlineSeats[i] === true) {
 			reasignFirstClass();
