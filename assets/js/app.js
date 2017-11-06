@@ -1,6 +1,5 @@
 var airlineSeats = [false, false, false, false, false, false, false, false, false, false];
 
-
 function bookTicket() {
     var answer = prompt("¿En qué zona prefieres reservar tu asiento? \n 1. Primera Clase \n 2. Clase Económica \n Por favor, ingresa el número");
     if (answer !== "") {
@@ -19,6 +18,16 @@ function firstClass() {
 		if (airlineSeats[i] === false) {
 			airlineSeats[i] = true;
 			document.getElementsByTagName("td")[i].setAttribute("class", "occupied");
+				var ticket = document.getElementsByTagName("td")[i].dataset.number;
+				var printedTicketTitle = document.createElement("p");
+				var title = document.createTextNode("Pase de Abordar");
+				var printedTicketContent = document.createElement("span");
+				var content = document.createTextNode("No. de asiento: " + ticket + ".");
+				printedTicketTitle.appendChild(title);
+				printedTicketContent.appendChild(content);
+				var where = document.getElementById("printed-tickets");
+				where.appendChild(printedTicketTitle);
+				where.appendChild(printedTicketContent);
 			break;
 		} else if (i == 3 && airlineSeats[i] === true) {
 			reasignEconomyClass();
@@ -59,4 +68,11 @@ function reasignFirstClass() {
 function nextFlight() {
 	alert("Nuestro próximo vuelo sale en 3 horas :)")
 };
+
+/*function printTicket() {
+	var paragraph = document.createElement("p");
+	var printedTicketTitle = document.createTextNode("Pase de Abordar");
+	var printedTicketContent = document.createTextNode("No. de asiento: " + ticket + ".");
+
+}*/
 
