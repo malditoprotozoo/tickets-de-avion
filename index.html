@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<title>Tickets De Avión</title>
+	<link href="https://fonts.googleapis.com/css?family=Lato:400,700" rel="stylesheet">
+	<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+	<h1>Bienvenido a Aerolíneas Buffay</h1>
+
+	<div id="symbology">
+		<h2>Simbología</h2>
+		<div class="available">Asiento Disponible</div>
+		<div class="occupied">Asiento Ocupado</div>
+	</div>
+
+
+	<table>
+		<tr>
+			<th>Clase</th>
+			<th>Asiento</th>
+		</tr>
+
+		<tr>
+			<td>Primera Clase</td>
+			<td class="available">1</td>
+			<td class="available">2</td>
+			<td class="available">3</td>
+			<td class="available">4</td>
+		</tr>
+
+		<tr>
+			<td>Clase Económica</td>
+			<td class="available">5</td>
+			<td class="available">6</td>
+			<td class="available">7</td>
+			<td class="available">8</td>
+			<td class="available">9</td>
+			<td class="available">10</td>
+		</tr>
+	</table>
+	
+	<button type="button" onclick="bookTicket()">Reservar Asiento</button>
+
+	<script src="assets/js/app.js"></script>
+
+</body>
+</html>
